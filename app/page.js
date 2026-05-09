@@ -38,7 +38,7 @@ export default function Portfolio() {
       image: '/projectImages/portfolio.png',
       description: 'This is an ancient scroll–themed portfolio, built it using Next.js and Tailwind CSS, with animations via Framer Motion. Designed and implemented a snake progress bar to show page navigation as levels, plus navigation buttons (functional on PC). Deployed on Vercel',
       tags: ['Next.js', 'Tailwind CSS'],
-      url: 'https://https://ancient-scroll-portfolio.vercel.app/'
+      url: 'https://ancient-scroll-portfolio.vercel.app/'
     },
   ];
 
