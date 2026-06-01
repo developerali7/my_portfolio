@@ -159,28 +159,95 @@ export default function Portfolio() {
 
       {/* CONTACT */}
       <section className="py-20 px-6 bg-zinc-900/50 text-center">
-        <h2 className="text-3xl font-bold mb-6 text-cyan-400">Contact</h2>
-        <p className="text-gray-400 mb-6">Let's build something amazing together.</p>
+        <h2 className="text-3xl font-bold mb-6 text-cyan-400">Let's Work Together</h2>
+        <p className="text-gray-400 mb-12 max-w-xl mx-auto">
+          Have a project in mind or want to discuss an opportunity?
+          Send me a message and I'll get back to you.
+        </p>
 
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-          {/* Primary Mailto Link */}
-          <motion.a
-            href={`mailto:${email}`}
-            target="_top"
-            whileHover={{ scale: 1.05 }}
-            className="px-6 py-3 bg-cyan-500 text-black font-semibold rounded-full hover:bg-cyan-600 w-44"
+        <div className="max-w-2xl mx-auto">
+          <form
+            action="https://formspree.io/f/xlgvylkp"
+            method="POST"
+            className="space-y-5"
           >
-            Say Hello
-          </motion.a>
+            <div className="grid md:grid-cols-2 gap-5">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                className="w-full px-5 py-4 bg-black/40 border border-zinc-700 rounded-xl focus:outline-none focus:border-cyan-400 transition"
+              />
 
-          {/* Secondary Copy Button */}
-          <motion.button
-            onClick={handleCopy}
-            whileHover={{ scale: 1.05 }}
-            className="px-6 py-3 border border-zinc-700 text-gray-300 font-semibold rounded-full hover:bg-zinc-800 transition-colors w-44 cursor-pointer"
-          >
-            {copied ? "✓ Copied!" : "Copy Email"}
-          </motion.button>
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+                className="w-full px-5 py-4 bg-black/40 border border-zinc-700 rounded-xl focus:outline-none focus:border-cyan-400 transition"
+              />
+            </div>
+
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              className="w-full px-5 py-4 bg-black/40 border border-zinc-700 rounded-xl focus:outline-none focus:border-cyan-400 transition"
+            />
+
+            <textarea
+              name="message"
+              rows="6"
+              placeholder="Tell me about your project..."
+              required
+              className="w-full px-5 py-4 bg-black/40 border border-zinc-700 rounded-xl focus:outline-none focus:border-cyan-400 transition resize-none"
+            />
+
+            <motion.button
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              type="submit"
+              className="w-full py-4 bg-cyan-500 text-black font-semibold rounded-xl hover:bg-cyan-600 transition"
+            >
+              Send Message
+            </motion.button>
+          </form>
+
+          <div className="grid md:grid-cols-3 gap-4 mt-10 max-w-4xl mx-auto">
+            <div className="bg-white/5 p-5 rounded-xl border border-white/10 text-center">
+              <h3 className="text-cyan-400 font-semibold">Email</h3>
+
+              <div className="flex items-center justify-center gap-2">
+                <p className="text-sm text-gray-400">
+                  {email}
+                </p>
+
+                <button
+                  onClick={handleCopy}
+                  className="text-xs px-2 py-1 rounded-md border border-zinc-700 hover:border-cyan-400 hover:text-cyan-400 transition cursor-pointer"
+                >
+                  {copied ? '✓' : '📋'}
+                </button>
+              </div>
+              
+            </div>
+
+            <div className="bg-white/5 p-5 rounded-xl border border-white/10 text-center">
+              <h3 className="text-cyan-400 font-semibold">Location</h3>
+              <p className="text-sm text-gray-400">
+                Pakistan
+              </p>
+            </div>
+
+            <div className="bg-white/5 p-5 rounded-xl border border-white/10 text-center">
+              <h3 className="text-cyan-400 font-semibold">Availability</h3>
+              <p className="text-sm text-gray-400">
+                Open to opportunities
+              </p>
+            </div>
+          </div>
+
         </div>
       </section>
 
