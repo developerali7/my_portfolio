@@ -18,7 +18,7 @@ export default function Portfolio() {
   const projects = [
     {
       id: 1,
-      title: 'The Perfumi',
+      title: 'Perfumi',
       image: '/projectImages/spray-bottle.png',
       description: 'E-commerce site for selling perfumes, built it using MERN stack and Tailwind CSS. It has all of neccessary features that should be in an e-commerce store like secure user authentication, user profile, shopping cart, order management system and admin dashboard',
       tags: ['React', 'Node Js', 'Express', 'MongoDB', 'Tailwind CSS', 'Stripe'],
@@ -26,7 +26,7 @@ export default function Portfolio() {
     },
     {
       id: 2,
-      title: 'The Fighters Hub',
+      title: 'Fighters Hub',
       image: '/projectImages/fightersLogo.jpg',
       description: 'A Website which displays mma and boxing fighters, fetches upcoming fights and latest news through an api. It includes home page, fighters page, fighters detail page, fights page, news page. built it using Vanilla JS, HTML and CSS',
       tags: ['HTML', 'CSS', 'Vanilla JS'],
@@ -44,6 +44,43 @@ export default function Portfolio() {
 
   return (
     <main className="bg-black text-white min-h-screen font-sans">
+      <motion.a
+        href="/resume/Kashif_Resume.pdf"
+        download
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.97 }}
+        className="
+          fixed
+          top-6
+          right-6
+          z-50
+          text-sm
+          text-zinc-400
+          hover:text-cyan-400
+          transition-colors
+          flex
+          items-center
+          gap-2
+        "
+      >
+        Resume
+        <svg 
+          xmlns="http://w3.org" 
+          width="16" 
+          height="16" 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          strokeWidth="2" 
+          strokeLinecap="round" 
+          strokeLinejoin="round" 
+        >
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" y1="15" x2="12" y2="3" />
+        </svg>
+      </motion.a>
+      
       {/* HERO */}
       <section className="h-screen flex flex-col justify-center items-center text-center px-2">
         <motion.h1
@@ -54,6 +91,10 @@ export default function Portfolio() {
         >
           Hi, I'm <span className="text-cyan-400">Kashif</span>
         </motion.h1>
+
+        <p className="mt-4 text-zinc-500 text-sm tracking-wide">
+          Full Stack Developer • React • Next.js • Node.js • MongoDB
+        </p>
 
         <TypeAnimation
           sequence={[
